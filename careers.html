@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Solutions | Iterum Concept Preview</title>
+<title>Careers | Iterum Concept Preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,19 +17,13 @@
 .page-hero h1{font-size:clamp(36px,5vw,62px);line-height:1.05;color:#fff;margin:14px 0 16px;max-width:760px}
 .page-hero h1 em{font-style:italic;color:var(--mint);font-weight:400}
 .page-hero p.sub{color:#b5cfc8;font-size:18px;max-width:600px}
-
-.how{counter-reset:step}
-.how-row{display:grid;grid-template-columns:110px 1fr 1fr;gap:40px;align-items:center;padding:60px 0;border-top:1px solid var(--line)}
-.how-row:first-of-type{border-top:none}
-.how-num{font-family:'Fraunces',serif;font-size:56px;color:var(--green);line-height:1}
-.how-row h3{font-family:'Fraunces',serif;font-size:clamp(24px,2.8vw,34px);color:var(--teal);font-weight:500;margin-bottom:12px}
-.how-row .steps{display:flex;flex-direction:column;gap:12px;margin-top:8px}
-.how-row .steps div{display:flex;gap:12px;font-size:14.5px;color:var(--body)}
-.how-row .steps b{color:var(--green-dark);font-family:'Fraunces',serif;flex:none}
-.how-row .pic{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md)}
-.how-row .pic img{width:100%;height:280px;object-fit:cover}
-@media(max-width:960px){.how-row{grid-template-columns:1fr}}
-
+.careers-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.careers-grid .pic{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md)}
+.cvals{display:flex;flex-direction:column;gap:16px;margin-top:26px}
+.cval{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;box-shadow:var(--sh-sm)}
+.cval b{font-size:14.5px;color:var(--teal);display:block}
+.cval p{font-size:12.8px;color:var(--body)}
+@media(max-width:900px){.careers-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -64,79 +58,27 @@
 
 <header class="page-hero">
   <div class="wrap">
-    <span class="eyebrow">Solutions</span>
-    <h1>Three solutions. One powerful <em>platform.</em></h1>
-    <p class="sub">Powered by our appliance data engine, we deliver value across Procurement, Management, and Consulting Services.</p>
+    <span class="eyebrow">Careers</span>
+    <h1>Help us redefine <em>appliances.</em></h1>
+    <p class="sub">Iterum is building the first appliance management infrastructure purpose-built for institutional landlords, combining supply chain expertise, engineering capability and data insights.</p>
   </div>
 </header>
 
 <section class="section">
-  <div class="wrap">
-    <div class="bento-head reveal">
-      <span class="eyebrow">How it works</span>
-      <h2>End-to-end appliance lifecycle management, <em>powered by data.</em></h2>
+  <div class="wrap careers-grid">
+    <div class="reveal">
+      <span class="eyebrow">Who we look for</span>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,42px);line-height:1.1;color:var(--teal);margin:14px 0 16px;font-weight:500">Operators, engineers and product people.</h2>
+      <p style="color:var(--body);font-size:16.5px">From in-house appliance engineers in the field to the team building Iterum IQ, the company runs on people who like fixing real problems for real residents and portfolios.</p>
+      <div class="cvals">
+        <div class="cval"><div><b>Open roles</b><p>No vacancies are listed in this concept preview. For current openings, contact the team directly at info@iterum.uk.</p></div></div>
+        <div class="cval"><div><b>Speculative applications</b><p>Think you'd make the team better? Send a short note and CV to info@iterum.uk.</p></div></div>
+      </div>
+      <div style="margin-top:28px"><a class="btn btn-green" href="mailto:info@iterum.uk">Get in touch</a></div>
     </div>
-    <div class="how">
-      <div class="how-row reveal">
-        <div class="how-num">1.0</div>
-        <div>
-          <h3>Consulting</h3>
-          <p style="color:var(--body)">Expert advice on appliance specs.</p>
-          <div class="steps">
-            <div><b>1.1</b><span>Combining industry expertise and operational data to guide you toward the appliance specs that optimise your portfolio for cost, quality, and energy efficiency.</span></div>
-          </div>
-        </div>
-        <div class="pic"><img src="assets/hero-kitchen.jpg" alt="Appliance specification consulting"></div>
-      </div>
-      <div class="how-row reveal">
-        <div class="how-num">2.0</div>
-        <div>
-          <h3>Procurement</h3>
-          <p style="color:var(--body)">From warehouse to installation.</p>
-          <div class="steps">
-            <div><b>2.1</b><span>Sourced via our OEM relationships.</span></div>
-            <div><b>2.2</b><span>Distributed via our distribution network.</span></div>
-            <div><b>2.3</b><span>Installed by our in-house Iterum engineers.</span></div>
-          </div>
-        </div>
-        <div class="pic"><img src="assets/engineers.png" alt="Iterum engineers installing an appliance"></div>
-      </div>
-      <div class="how-row reveal">
-        <div class="how-num">3.0</div>
-        <div>
-          <h3>Appliance Management</h3>
-          <p style="color:var(--body)">Ongoing maintenance service and data reporting with Iterum IQ.</p>
-          <div class="steps">
-            <div><b>3.1</b><span>Appliance maintenance triaging and resolution, facilitated by Iterum IQ and our in-house engineers.</span></div>
-            <div><b>3.2</b><span>Scheduling and logistics managed across residents and property managers.</span></div>
-            <div><b>3.3</b><span>Ongoing data capture and reporting via Iterum IQ.</span></div>
-          </div>
-        </div>
-        <div class="pic"><img src="assets/iq-dashboard.png" alt="Iterum IQ dashboard" style="object-position:top"></div>
-      </div>
-    </div>
+    <div class="pic reveal d2"><img src="assets/engineers.png" alt="Iterum engineers at work"></div>
   </div>
 </section>
-
-<div class="stats">
-  <div class="wrap">
-    <div class="stat reveal"><div class="big">Up to <span>97%</span></div><p>capex reductions. Bespoke advisory on appliance specs and strong OEM relationships enable significant upfront cost savings.</p><span class="src">Proven results, iterum.uk</span></div>
-    <div class="stat reveal d1"><div class="big"><span>80%</span></div><p>5 year estimated OpEx reduction. Ongoing maintenance by our Iterum engineers keeps OpEx low and predictable.</p><span class="src">Proven results, iterum.uk</span></div>
-    <div class="stat reveal d2"><div class="big"><span>NOI</span></div><p>The end result: time, cost and carbon saved, improving NOI and capital value.</p><span class="src">Published on iterum.uk</span></div>
-  </div>
-</div>
-
-<section class="ctaband">
-  <div class="wrap">
-    <h2 class="reveal">See the platform <em>working.</em></h2>
-    <p class="reveal d1">Book a 30 minute walkthrough in the chat, any hour of the day.</p>
-    <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-white" onclick="openChat()">Book a demo</button>
-      <a class="btn btn-ghost" href="mailto:info@iterum.uk">info@iterum.uk</a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div class="cols">

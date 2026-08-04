@@ -51,3 +51,6 @@ function route(k){
 }
 /* gentle auto-open once; desktop only */
 setTimeout(()=>{if(!chatOpened&&!autoOpened&&window.innerWidth>760){autoOpened=true;openChat()}},7000);
+
+function toggleMenu(){const m=document.getElementById('mobileMenu'); if(m) m.classList.toggle('open')}
+document.addEventListener('click',e=>{const m=document.getElementById('mobileMenu'); if(m&&m.classList.contains('open')&&!m.contains(e.target)&&!e.target.closest('.nav-burger')) m.classList.remove('open')});
