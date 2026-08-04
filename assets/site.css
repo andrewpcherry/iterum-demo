@@ -294,7 +294,7 @@ nav{max-width:1080px;margin:0 auto;background:rgba(255,255,255,.82);backdrop-fil
 
 /* cta */
 .ctaband{background:linear-gradient(160deg,var(--teal) 0%,var(--teal-2) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-.ctaband::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 300px at 50% 0%,rgba(10,160,120,.25),transparent 70%)}
+.ctaband::before{content:'';position:absolute;inset:0;background:url('brand-pattern.png') center/cover,radial-gradient(700px 300px at 50% 0%,rgba(10,160,120,.25),transparent 70%)}
 .ctaband .wrap{padding-top:100px;padding-bottom:100px;position:relative;z-index:2}
 .ctaband h2{font-size:clamp(32px,4.8vw,56px);color:#fff;max-width:800px;margin:0 auto 18px;line-height:1.06}
 .ctaband h2 em{font-style:italic;color:var(--mint);font-weight:400}
@@ -304,7 +304,7 @@ nav{max-width:1080px;margin:0 auto;background:rgba(255,255,255,.82);backdrop-fil
 footer{background:var(--teal-deep);color:#8fb0a8;padding:64px 0 36px;font-size:14px}
 footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px}
 footer .flogo{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-footer .flogo img{height:34px;width:34px;background:#fff;border-radius:9px;padding:5px}
+footer .flogo img{height:38px;width:auto}
 footer .flogo b{font-family:'Fraunces',serif;font-size:22px;color:#fff;font-weight:500}
 footer h4{color:#fff;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
 footer a{display:block;padding:3.5px 0}
