@@ -140,6 +140,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:8
 
 /* dark always-on */
 .dark-sec{background:var(--teal);color:#fff;position:relative;overflow:hidden}
+.dark-sec .bgimg{position:absolute;inset:0;opacity:.10;pointer-events:none}
+.dark-sec .bgimg img{width:100%;height:100%;object-fit:cover}
+.dark-sec .bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--teal) 4%,rgba(19,50,57,.5) 50%,var(--teal) 96%)}
+.dark-sec .wrap{position:relative;z-index:2}
 .dark-sec .eyebrow{color:#5ed6b2}
 .dark-sec .eyebrow::before{background:#5ed6b2}
 .dark-sec .s-head h2{color:#fff}
@@ -201,7 +205,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:8
 
 /* IQ section */
 .iq-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin-top:40px}
+.iq-stack{position:relative;padding-bottom:90px;padding-right:60px}
 .iq-grid .shot{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);border:1px solid var(--line)}
+.iq-stack .shot2{position:absolute;right:0;bottom:0;width:58%;border-radius:16px;overflow:hidden;box-shadow:var(--sh-lg);border:1px solid var(--line);background:#fff}
+@media(max-width:960px){.iq-stack{padding-right:0}}
 .iq-points{display:flex;flex-direction:column;gap:18px}
 .iq-point{display:flex;gap:14px;align-items:flex-start}
 .iq-point .tick{width:26px;height:26px;flex:none;border-radius:50%;background:rgba(10,160,120,.12);display:flex;align-items:center;justify-content:center}
@@ -211,14 +218,30 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:8
 @media(max-width:960px){.iq-grid{grid-template-columns:1fr}}
 
 /* team */
-.team-list{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
-.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--sh-sm)}
-.tcard .mono{width:46px;height:46px;border-radius:12px;background:var(--teal);color:#5ed6b2;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:19px;margin-bottom:14px}
-.tcard b{display:block;font-size:15.5px;color:var(--teal)}
+.team-feature{display:grid;grid-template-columns:320px 1fr;gap:50px;align-items:center;margin:56px 0}
+.team-feature .pic{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);position:relative}
+.team-feature .pic img{filter:grayscale(1);width:100%;display:block}
+.team-feature .pic .role-tag{position:absolute;bottom:14px;left:14px;background:var(--green);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:8px;padding:6px 12px}
+.team-feature h3{font-family:'Fraunces',serif;font-size:clamp(22px,2.8vw,30px);color:var(--teal);line-height:1.35;margin-bottom:20px;font-weight:500}
+.team-feature .who b{font-size:16px;color:var(--teal);display:block}
+.team-feature .who span{font-size:13.5px;color:var(--soft)}
+@media(max-width:900px){.team-feature{grid-template-columns:1fr}}
+.team-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--sh-sm);transition:transform .2s,box-shadow .2s}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.tcard img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;filter:grayscale(1);transition:filter .3s}
+.tcard:hover img{filter:grayscale(0)}
+.tcard .tb{padding:16px 18px;border-top:3px solid var(--green)}
+.tcard b{display:block;font-size:15px;color:var(--teal)}
 .tcard span{font-size:12.5px;color:var(--soft)}
 @media(max-width:960px){.team-list{grid-template-columns:1fr 1fr}}
-.eng-note{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px 26px;box-shadow:var(--sh-sm);font-size:14.5px;color:var(--body)}
-.eng-note b{color:var(--teal)}
+.eng-card{margin-top:26px;background:var(--teal);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);display:grid;grid-template-columns:280px 1fr;align-items:stretch;color:#fff}
+.eng-card img{width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:grayscale(1)}
+.eng-card .eb{padding:34px 38px;display:flex;flex-direction:column;justify-content:center}
+.eng-card .eb .tag{display:inline-block;background:rgba(10,160,120,.25);color:#5ed6b2;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 14px;margin-bottom:14px;width:max-content}
+.eng-card .eb b.name{font-family:'Fraunces',serif;font-size:24px;font-weight:500;display:block;margin-bottom:8px}
+.eng-card .eb p{font-size:14.5px;color:#b5cfc8;line-height:1.7}
+@media(max-width:800px){.eng-card{grid-template-columns:1fr}.eng-card img{max-height:300px}}
 
 /* cta band */
 .ctaband{background:var(--teal);color:#fff;text-align:center}
@@ -372,6 +395,7 @@ footer a:hover{color:#fff}
 </section>
 
 <section class="section dark-sec" id="always-on">
+  <div class="bgimg"><img src="assets/engineers.png" alt=""></div>
   <div class="wrap">
     <div class="s-head reveal">
       <span class="eyebrow">The always-on layer · concept</span>
@@ -467,7 +491,10 @@ footer a:hover{color:#fff}
       <p>Your appliance data engine: repairs, replacements, budgets and carbon, tracked per unit and reported per portfolio.</p>
     </div>
     <div class="iq-grid">
-      <div class="shot reveal"><img src="assets/iq-reports.png" alt="Iterum IQ quarterly report view"></div>
+      <div class="iq-stack reveal">
+        <div class="shot"><img src="assets/iq-reports.png" alt="Iterum IQ quarterly report view"></div>
+        <div class="shot2"><img src="assets/iq-dashboard.png" alt="Iterum IQ dashboard with live issue requests"></div>
+      </div>
       <div class="iq-points reveal d2">
         <div class="iq-point"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Every issue, one record</b><p>Requests, repairs and replacements tracked per unit, with status visible at a glance.</p></div></div>
         <div class="iq-point"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Budgets watched in real time</b><p>Repair and replacement spend against budget, per property and per quarter.</p></div></div>
@@ -485,18 +512,28 @@ footer a:hover{color:#fff}
       <h2>Built by operators, engineers and product people</h2>
       <p>Technology handles the after-hours gaps. These are the people who handle your portfolio.</p>
     </div>
-    <div class="team-list">
-      <div class="tcard reveal d1"><div class="mono">JH</div><b>Jon Holden</b><span>CEO</span></div>
-      <div class="tcard reveal d1"><div class="mono">FD</div><b>Felix Dahlke</b><span>CTO</span></div>
-      <div class="tcard reveal d2"><div class="mono">CW</div><b>Chris Wilson</b><span>Commercial Director</span></div>
-      <div class="tcard reveal d2"><div class="mono">TF</div><b>Tom Fitzgerald</b><span>Head of Business Operations</span></div>
-      <div class="tcard reveal d3"><div class="mono">EW</div><b>Emma Witherington</b><span>Head of Product</span></div>
-      <div class="tcard reveal d3"><div class="mono">EK</div><b>Elliot Kim</b><span>Founding Engineer</span></div>
-      <div class="tcard reveal d3"><div class="mono">CC</div><b>Charlie Chamberlayne</b><span>Head of Service Operations</span></div>
-      <div class="tcard reveal d3"><div class="mono">JK</div><b>Jon Kovacs</b><span>In-House Engineer · Bristol to Birmingham</span></div>
+    <div class="team-feature reveal">
+      <div class="pic"><img src="assets/team-jon-holden.png" alt="Jon Holden, CEO of Iterum"><span class="role-tag">CEO</span></div>
+      <div>
+        <h3>Turning appliances from a pain point into a performance driver: the first appliance management infrastructure purpose-built for institutional landlords.</h3>
+        <div class="who"><b>Jon Holden</b><span>Chief Executive Officer</span></div>
+      </div>
     </div>
-    <div class="eng-note reveal">
-      <b>In-house engineering, not a call-out lottery.</b> Iterum employs its own expert engineers, delivering quick diagnosis, reliable repairs and installs, and practical prevention across the sites they oversee.
+    <div class="team-list">
+      <div class="tcard reveal d1"><img src="assets/team-felix.png" alt="Felix Dahlke"><div class="tb"><b>Felix Dahlke</b><span>CTO</span></div></div>
+      <div class="tcard reveal d1"><img src="assets/team-chris.png" alt="Chris Wilson"><div class="tb"><b>Chris Wilson</b><span>Commercial Director</span></div></div>
+      <div class="tcard reveal d2"><img src="assets/team-tom.png" alt="Tom Fitzgerald"><div class="tb"><b>Tom Fitzgerald</b><span>Head of Business Operations</span></div></div>
+      <div class="tcard reveal d2"><img src="assets/team-emma.png" alt="Emma Witherington"><div class="tb"><b>Emma Witherington</b><span>Head of Product</span></div></div>
+      <div class="tcard reveal d3"><img src="assets/team-elliot.png" alt="Elliot Kim"><div class="tb"><b>Elliot Kim</b><span>Founding Engineer</span></div></div>
+      <div class="tcard reveal d3"><img src="assets/team-charlie.jpg" alt="Charlie Chamberlayne"><div class="tb"><b>Charlie Chamberlayne</b><span>Head of Service Operations</span></div></div>
+    </div>
+    <div class="eng-card reveal">
+      <img src="assets/team-kovacs.png" alt="Jon Kovacs, in-house engineer">
+      <div class="eb">
+        <span class="tag">Engineer Spotlight · Birmingham</span>
+        <b class="name">Jon Kovacs</b>
+        <p>Iterum is proud to employ its own expert in-house engineers. Jon brings over a decade of home appliance experience to the team, delivering top-quality triaging support, quick diagnosis, reliable repairs and installs, and practical prevention across the sites he oversees between Bristol and Birmingham.</p>
+      </div>
     </div>
   </div>
 </section>
