@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Blog and Insights | Iterum Concept Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.page-hero{background:linear-gradient(160deg,var(--teal) 0%,var(--teal-2) 100%);color:#fff;position:relative;overflow:hidden;margin-top:-92px;padding:170px 0 80px}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 300px at 80% 0%,rgba(10,160,120,.25),transparent 70%)}
+.page-hero .wrap{position:relative;z-index:2}
+.page-hero .eyebrow{color:var(--mint)}
+.page-hero h1{font-size:clamp(36px,5vw,62px);line-height:1.05;color:#fff;margin:14px 0 16px;max-width:760px}
+.page-hero h1 em{font-style:italic;color:var(--mint);font-weight:400}
+.page-hero p.sub{color:#b5cfc8;font-size:18px;max-width:600px}
+
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.post{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--sh-sm);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.post:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.post .pmeta{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.post .cat{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dark);background:rgba(10,160,120,.1);border-radius:999px;padding:5px 12px}
+.post .date{font-size:12px;color:var(--soft)}
+.post h3{font-family:'Fraunces',serif;font-size:20px;line-height:1.3;color:var(--teal);font-weight:500;margin-bottom:10px}
+.post p{font-size:14px;color:var(--body);flex:1}
+.post a{margin-top:18px;font-weight:800;font-size:13.5px;color:var(--green-dark)}
+@media(max-width:900px){.posts{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+
+<div class="ribbon"><b>Concept preview</b> prepared for Iterum · a design demonstration, not the live website</div>
+
+<div class="navwrap">
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="assets/logo-mark.svg" alt="Iterum"><b>iterum</b></a>
+    <div class="navlinks">
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-cta" onclick="openChat();return false">Book a Demo</a>
+    </div>
+  </nav>
+</div>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Blog &amp; Insights</span>
+    <h1>Thinking on appliances, <em>ESG and BTR.</em></h1>
+    <p class="sub">The five most recent posts published on iterum.uk.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="posts">
+      <div class="post reveal"><div class="pmeta"><span class="cat">Operations</span><span class="date">September 14, 2025 · 3 min</span></div><h3>Iterum CEO receives UKAA build to rent award</h3><p>Iterum wins UKAA BTR award, highlighting our circular solutions that boost cost efficiency, tenant satisfaction, and portfolio performance.</p><a href="https://www.iterum.uk/blog" target="_blank" rel="noopener">Read on iterum.uk</a></div>
+      <div class="post reveal d1"><div class="pmeta"><span class="cat">Operations</span><span class="date">September 7, 2025 · 3 min</span></div><h3>Iterum embraces UK's booming build to rent sector</h3><p>UK BTR sector set for £8.1bn investment in 2024. Strong demand, urban focus, and sustainability drive growth, aligning with Iterum's leasing vision.</p><a href="https://www.iterum.uk/blog" target="_blank" rel="noopener">Read on iterum.uk</a></div>
+      <div class="post reveal d2"><div class="pmeta"><span class="cat">ESG</span><span class="date">September 4, 2025 · 3 min</span></div><h3>Expert panel discusses ESG in the living sector amid general election counting</h3><p>ESG in living sectors needs clarity, consistency, and tech. No silver bullet, but small changes and better data can drive ROI and net-zero goals.</p><a href="https://www.iterum.uk/blog" target="_blank" rel="noopener">Read on iterum.uk</a></div>
+      <div class="post reveal d1"><div class="pmeta"><span class="cat">Cost Optimisation</span><span class="date">September 4, 2025 · 3 min</span></div><h3>Iterum investigates UK's rising single family rentals trend</h3><p>Access over ownership is reshaping property as Single Family Rentals surge in the UK, driven by costs, renting trends, and remote work.</p><a href="https://www.iterum.uk/blog" target="_blank" rel="noopener">Read on iterum.uk</a></div>
+      <div class="post reveal d2"><div class="pmeta"><span class="cat">ESG</span><span class="date">September 2, 2025 · 3 min</span></div><h3>Energy use accounts for 36 billion tonnes of global greenhouse emissions. How can we make easy but significant changes?</h3><p>Small changes in energy use and circular economy models can cut emissions, lower costs, and extend appliance lifecycles toward net zero.</p><a href="https://www.iterum.uk/blog" target="_blank" rel="noopener">Read on iterum.uk</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband">
+  <div class="wrap">
+    <h2 class="reveal">Less reading, more <em>doing?</em></h2>
+    <p class="reveal d1">Book a demo in the chat and see the platform on your own portfolio.</p>
+    <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-white" onclick="openChat()">Book a demo</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><img src="assets/logo-mark.svg" alt="Iterum"><b>iterum</b></div>
+        <p>End-to-end appliance lifecycle solutions for scaled rental portfolios. London, UK.</p>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="solutions.html">Consulting</a>
+        <a href="solutions.html">Procurement</a>
+        <a href="solutions.html">Appliance Management</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog &amp; Insights</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:info@iterum.uk">info@iterum.uk</a>
+        <a href="#" onclick="openChat();return false">Message us now</a>
+      </div>
+    </div>
+    <div class="disclosure">
+      This page is a design concept preview prepared for Iterum and is not the company's live website. The chat assistant shown is a scripted demonstration, not a live system. Copy, quotes, impact figures, team, partner and platform information are sourced from iterum.uk as of August 5, 2026. Imagery, logo and partner marks sourced from iterum.uk.
+    </div>
+  </div>
+</footer>
+
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Open chat">
+  <span class="pulse"></span>
+  <svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.6 1.3 4.9 3.4 6.5-.1 1-.6 2.4-1.8 3.5 0 0 2.7-.2 4.8-1.7 1.1.3 2.4.5 3.6.5 5.5 0 10-3.9 10-8.8S17.5 3 12 3z"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="cav"><img src="assets/logo-mark.svg" alt=""></div>
+    <div><b>Iterum Assistant</b><span><i class="don"></i>Online now, replies in seconds</span></div>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-foot"><span>Scripted demo preview. The live version is trained on Iterum's solutions, portfolio data and booking calendar.</span></div>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

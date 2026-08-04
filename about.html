@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>About Us | Iterum Concept Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.page-hero{background:linear-gradient(160deg,var(--teal) 0%,var(--teal-2) 100%);color:#fff;position:relative;overflow:hidden;margin-top:-92px;padding:170px 0 80px}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 300px at 80% 0%,rgba(10,160,120,.25),transparent 70%)}
+.page-hero .wrap{position:relative;z-index:2}
+.page-hero .eyebrow{color:var(--mint)}
+.page-hero h1{font-size:clamp(36px,5vw,62px);line-height:1.05;color:#fff;margin:14px 0 16px;max-width:760px}
+.page-hero h1 em{font-style:italic;color:var(--mint);font-weight:400}
+.page-hero p.sub{color:#b5cfc8;font-size:18px;max-width:600px}
+
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.why .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 30px;box-shadow:var(--sh-sm)}
+.why .num{font-family:'Fraunces',serif;font-size:40px;color:var(--green);line-height:1;margin-bottom:14px}
+.why b{font-size:18px;color:var(--teal);display:block;margin-bottom:8px}
+.why p{font-size:14.5px;color:var(--body)}
+@media(max-width:900px){.why{grid-template-columns:1fr}}
+.contact-note{margin-top:70px;background:var(--teal);border-radius:var(--r-lg);padding:44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.contact-note h3{font-family:'Fraunces',serif;font-size:26px;font-weight:500}
+.contact-note p{color:#b5cfc8;font-size:15px}
+
+</style>
+</head>
+<body>
+
+<div class="ribbon"><b>Concept preview</b> prepared for Iterum · a design demonstration, not the live website</div>
+
+<div class="navwrap">
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="assets/logo-mark.svg" alt="Iterum"><b>iterum</b></a>
+    <div class="navlinks">
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-cta" onclick="openChat();return false">Book a Demo</a>
+    </div>
+  </nav>
+</div>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">About us</span>
+    <h1>Turning appliances from a pain point into a <em>performance driver.</em></h1>
+    <p class="sub">Iterum is the first appliance management infrastructure purpose-built for institutional landlords. We combine supply chain expertise, engineering capability, and data insights through Iterum IQ to enhance ESG focus, streamline operational workflows and reduce cost.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="bento-head reveal">
+      <span class="eyebrow">Why Iterum</span>
+      <h2>End to end, data-powered, <em>purpose-built.</em></h2>
+    </div>
+    <div class="why">
+      <div class="card reveal"><div class="num">1.0</div><b>End to End</b><p>We partner with you across the entire appliance lifecycle, from consulting on the right specs for your portfolio, to procuring at best value, and managing all appliance maintenance needs going forward.</p></div>
+      <div class="card reveal d1"><div class="num">2.0</div><b>Data-Powered</b><p>Harnessing the power of data to deliver ongoing insights for cost and efficiency gains.</p></div>
+      <div class="card reveal d2"><div class="num">3.0</div><b>Purpose-Built</b><p>Designed specifically for the unique needs of institutional residential operators and investors.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section team-sec" id="team" style="padding-top:80px">
+  <div class="wrap">
+    <div class="team-head reveal">
+      <div>
+        <span class="eyebrow">Meet the team</span>
+        <h2>Built by operators, engineers and product people</h2>
+      </div>
+      <p>Powered by our appliance data engine, we deliver value across Procurement, Management, and Consulting Services.</p>
+    </div>
+    <div class="team-feature reveal">
+      <div class="pic"><img src="assets/team-jon-holden.png" alt="Jon Holden, CEO of Iterum"><span class="role-tag">CEO</span></div>
+      <div>
+        <h3>Turning appliances from a pain point into a performance driver: the first appliance management infrastructure purpose-built for institutional landlords.</h3>
+        <div class="who"><b>Jon Holden</b><span>Chief Executive Officer</span></div>
+      </div>
+    </div>
+    <div class="team-list">
+      <div class="tcard reveal d1"><img src="assets/team-felix.png" alt="Felix Dahlke"><div class="tb"><b>Felix Dahlke</b><span>CTO</span></div></div>
+      <div class="tcard reveal d1"><img src="assets/team-chris.png" alt="Chris Wilson"><div class="tb"><b>Chris Wilson</b><span>Commercial Director</span></div></div>
+      <div class="tcard reveal d2"><img src="assets/team-tom.png" alt="Tom Fitzgerald"><div class="tb"><b>Tom Fitzgerald</b><span>Business Operations</span></div></div>
+      <div class="tcard reveal d2"><img src="assets/team-emma.png" alt="Emma Witherington"><div class="tb"><b>Emma Witherington</b><span>Head of Product</span></div></div>
+      <div class="tcard reveal d3"><img src="assets/team-elliot.png" alt="Elliot Kim"><div class="tb"><b>Elliot Kim</b><span>Founding Engineer</span></div></div>
+      <div class="tcard reveal d3"><img src="assets/team-charlie.jpg" alt="Charlie Chamberlayne"><div class="tb"><b>Charlie Chamberlayne</b><span>Service Operations</span></div></div>
+    </div>
+    <div class="eng-card reveal">
+      <img src="assets/team-kovacs.png" alt="Jon Kovacs, in-house engineer">
+      <div class="eb">
+        <span class="tag">Engineer Spotlight · Birmingham</span>
+        <b class="name">Jon Kovacs</b>
+        <p>Iterum is proud to employ its own expert in-house engineers. Jon brings over a decade of home appliance experience to the team, delivering top-quality triaging support, quick diagnosis, reliable repairs and installs, and practical prevention across the sites he oversees between Bristol and Birmingham.</p>
+      </div>
+    </div>
+    <div class="contact-note reveal">
+      <div>
+        <h3>Ready to transform your appliance operations?</h3>
+        <p>Let's start the conversation. Email info@iterum.uk, or use the chat and it's booked in under a minute.</p>
+      </div>
+      <button class="btn btn-green" onclick="openChat()">Book a demo</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><img src="assets/logo-mark.svg" alt="Iterum"><b>iterum</b></div>
+        <p>End-to-end appliance lifecycle solutions for scaled rental portfolios. London, UK.</p>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="solutions.html">Consulting</a>
+        <a href="solutions.html">Procurement</a>
+        <a href="solutions.html">Appliance Management</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog &amp; Insights</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:info@iterum.uk">info@iterum.uk</a>
+        <a href="#" onclick="openChat();return false">Message us now</a>
+      </div>
+    </div>
+    <div class="disclosure">
+      This page is a design concept preview prepared for Iterum and is not the company's live website. The chat assistant shown is a scripted demonstration, not a live system. Copy, quotes, impact figures, team, partner and platform information are sourced from iterum.uk as of August 5, 2026. Imagery, logo and partner marks sourced from iterum.uk.
+    </div>
+  </div>
+</footer>
+
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Open chat">
+  <span class="pulse"></span>
+  <svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.6 1.3 4.9 3.4 6.5-.1 1-.6 2.4-1.8 3.5 0 0 2.7-.2 4.8-1.7 1.1.3 2.4.5 3.6.5 5.5 0 10-3.9 10-8.8S17.5 3 12 3z"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="cav"><img src="assets/logo-mark.svg" alt=""></div>
+    <div><b>Iterum Assistant</b><span><i class="don"></i>Online now, replies in seconds</span></div>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-foot"><span>Scripted demo preview. The live version is trained on Iterum's solutions, portfolio data and booking calendar.</span></div>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
