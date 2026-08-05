@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Conversational AI Layer | Iterum Concept Walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=8">
+<style>
+.d-hero{position:relative;overflow:hidden;margin-top:-92px;color:#fff;background:linear-gradient(160deg,var(--teal) 0%,var(--teal-2) 60%,var(--teal-deep) 100%)}
+.d-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(800px 340px at 75% 0%,rgba(10,160,120,.3),transparent 70%)}
+.d-hero .wrap{position:relative;z-index:2;padding:180px 28px 90px}
+.d-hero .eyebrow{color:var(--mint)}
+.d-hero h1{font-size:clamp(38px,5.2vw,66px);line-height:1.03;color:#fff;margin:14px 0 18px;max-width:860px}
+.d-hero h1 em{font-style:italic;color:var(--mint);font-weight:400}
+.d-hero p.sub{color:#cfe2da;font-size:18.5px;max-width:640px;margin-bottom:34px}
+.gaps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.gap{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:22px 24px}
+.gap b{display:block;font-size:15.5px;margin-bottom:6px}
+.gap p{font-size:13.5px;color:#a8c3bd}
+@media(max-width:900px){.gaps{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.split h2{font-size:clamp(28px,3.8vw,44px);line-height:1.1;color:var(--teal);margin:14px 0 16px}
+.split h2 em{font-style:italic;color:var(--green);font-weight:400}
+.split .sub{color:var(--body);font-size:17px;margin-bottom:26px}
+@media(max-width:960px){.split{grid-template-columns:1fr}}
+.res-point{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;box-shadow:var(--sh-sm);margin-bottom:12px}
+.res-point .ri{width:36px;height:36px;flex:none;border-radius:10px;background:rgba(10,160,120,.1);display:flex;align-items:center;justify-content:center}
+.res-point .ri svg{width:17px;height:17px;stroke:var(--green-dark)}
+.res-point b{font-size:14.5px;color:var(--teal);display:block}
+.res-point p{font-size:12.8px;color:var(--body)}
+.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:50px}
+.ben{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--sh-sm);display:flex;gap:16px}
+.ben .bi{width:44px;height:44px;flex:none;border-radius:12px;background:rgba(10,160,120,.12);display:flex;align-items:center;justify-content:center}
+.ben .bi svg{width:20px;height:20px;stroke:var(--green-dark)}
+.ben b{font-size:16.5px;color:var(--teal);display:block;margin-bottom:5px}
+.ben p{font-size:14px;color:var(--body)}
+@media(max-width:900px){.benefits{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><b>Walkthrough</b> the conversational AI layer, shown on the Iterum concept site</div>
+
+<div class="navwrap">
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="assets/logo-mark.svg" alt="Iterum"><b>iterum</b></a>
+    <div class="navlinks">
+      <a href="index.html" class="nav-cta">View the site</a>
+    </div>
+  </nav>
+</div>
+
+<header class="d-hero">
+  <div class="wrap">
+    <span class="eyebrow">The conversational layer</span>
+    <h1>Every visitor answered. Every fault triaged. <em>Any hour.</em></h1>
+    <p class="sub">The concept site looks and reads like Iterum. This page shows the one thing underneath it that is new: a conversational layer that answers operators and residents the moment they arrive, and hands the team a booked, documented job instead of a missed message.</p>
+    <a class="btn btn-green" href="index.html">See it in place on the site</a>
+    <div class="gaps">
+      <div class="gap"><b>No live chat today</b><p>Verified against iterum.uk: no chat widget of any kind on the current site.</p></div>
+      <div class="gap"><b>No phone number today</b><p>The current site offers an email address and a demo form. Nothing answers outside office hours.</p></div>
+      <div class="gap"><b>Five broken links today</b><p>Testimonials, Careers, Case Studies, Contact and Book a Demo all return a not-found page.</p></div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="bento-head reveal">
+      <span class="eyebrow">Scene one</span>
+      <h2>A fault at 10 PM, handled by 10:08.</h2>
+      <p>The sequence below runs exactly as it would on the live site, from the resident's first message to the record landing in Iterum IQ.</p>
+    </div>
+    <div class="console reveal" style="max-width:760px;margin:0 auto;transform:none">
+      <div class="chead">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <b>Live operations · this evening</b>
+        <span class="live"><i></i>ALWAYS ON</span>
+      </div>
+      <div class="cbody">
+        <div class="cstep" data-step>
+          <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.6-.8L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></div>
+          <div><b>Resident reports a fault</b><p>Washing machine won't drain, flat 12. Photo and error code captured in chat.</p></div>
+          <span class="ct">10:04 PM</span>
+        </div>
+        <div class="cstep" data-step>
+          <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l2.5 5.6 6.1.6-4.6 4.1 1.3 6-5.3-3.2-5.3 3.2 1.3-6L3.4 9.2l6.1-.6L12 3z"/></svg></div>
+          <div><b>Triaged instantly</b><p>E18 pattern suggests a blocked drain pump. Right part flagged for the van.</p></div>
+          <span class="ct">10:05 PM</span>
+        </div>
+        <div class="cstep" data-step>
+          <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div>
+          <div><b>Engineer visit booked</b><p>Tomorrow 9:30 to 11:00. Resident confirmed, property manager notified.</p></div>
+          <span class="ct">10:07 PM</span>
+        </div>
+        <div class="cstep" data-step>
+          <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3M20 16V6"/></svg></div>
+          <div><b>Logged to Iterum IQ</b><p>Ticket, photos and booking attached to the unit record. Reporting updated.</p></div>
+          <span class="ct">10:08 PM</span>
+        </div>
+      </div>
+      <div class="cfoot">Scripted demonstration · times and details illustrative</div>
+    </div>
+  </div>
+</section>
+
+<section class="section resident">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Scene two</span>
+      <h2>The resident's side of the <em>same evening.</em></h2>
+      <p class="sub">One conversation replaces a voicemail, a callback and a wasted engineer visit.</p>
+      <div class="res-point"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.6-.8L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></div><div><b>Report in seconds, any hour</b><p>No call queues, no waiting for office hours.</p></div></div>
+      <div class="res-point"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l2.5 5.6 6.1.6-4.6 4.1 1.3 6-5.3-3.2-5.3 3.2 1.3-6L3.4 9.2l6.1-.6L12 3z"/></svg></div><div><b>First-time-fix starts in chat</b><p>Make, model and fault captured before the van rolls.</p></div></div>
+      <div class="res-point"><div class="ri"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div><div><b>Booked, confirmed, notified</b><p>Engineer slot agreed in the same conversation.</p></div></div>
+    </div>
+    <div class="reveal d2">
+      <div class="phone">
+        <div class="pscreen">
+          <div class="pstatus"><span>10:04 PM</span><span>5G</span></div>
+          <div class="pchat-head">
+            <img src="assets/logo-mark.svg" alt="Iterum">
+            <div><b>Iterum Resident Support</b><span>Online now</span></div>
+          </div>
+          <div class="pthread" id="smsThread">
+            <div class="bub out">Hi, the washing machine in flat 12 has stopped mid cycle and won't drain<span class="t">10:04 PM</span></div>
+            <div class="bub in">Sorry about that, let's get it sorted. Can you send a photo of the display and the model sticker inside the door?<span class="t">10:04 PM</span></div>
+            <div class="bub out">Photo sent, it's flashing E18<span class="t">10:06 PM</span></div>
+            <div class="bub in">Thanks. That usually points to a blocked drain pump. An engineer can visit tomorrow. Morning or afternoon?<span class="t">10:06 PM</span></div>
+            <div class="bub out">Morning please<span class="t">10:07 PM</span></div>
+            <div class="bub in">Booked for tomorrow morning, 9:30 to 11:00. Your property manager has been notified and you'll get a confirmation here.<span class="t">10:07 PM</span></div>
+          </div>
+          <div class="plabel">Scripted demonstration · times and details illustrative</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="bento-head reveal">
+      <span class="eyebrow">Scene three</span>
+      <h2>The operator who lands at 9 PM <em>books themselves in.</em></h2>
+      <p>Asset managers compare suppliers out of hours. Today that visit ends at a form. Here it ends on the calendar.</p>
+    </div>
+    <div class="bento">
+      <div class="tile t-chat reveal">
+        <div class="tchead"><img src="assets/logo-mark.svg" alt=""><div><b>Website concierge</b><span>QUALIFIES AND BOOKS, 24/7</span></div></div>
+        <div class="tcbody" id="tileChat">
+          <div class="tbub out">We run about 1,400 units across two BTR schemes. Can your model cover mixed appliance estates?</div>
+          <div class="tbub in">Yes, mixed estates are the usual case. Best next step is a 30 minute walkthrough with portfolio examples at your scale. Thursday morning or Friday afternoon?</div>
+          <div class="tbub out">Thursday works</div>
+          <div class="tbub in">Booked. Calendar invite and a short agenda are on the way to you now.</div>
+        </div>
+        <div class="tclabel">Scripted preview of the demo-booking concierge</div>
+      </div>
+      <div class="tile t-notif reveal d1">
+        <div class="tnhead"><b>Team notifications</b><span>Sample evening, illustrative</span></div>
+        <div class="tnbody">
+          <div class="tnote" data-tn><div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div><div><b>Demo booked</b><p>BTR operator, qualified in chat</p></div><span class="nt">9:12 PM</span></div>
+          <div class="tnote" data-tn><div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.6-.8L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></div><div><b>Fault triaged</b><p>Engineer booked for the morning</p></div><span class="nt">10:07 PM</span></div>
+          <div class="tnote" data-tn><div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3M20 16V6"/></svg></div><div><b>Logged to Iterum IQ</b><p>Unit record updated automatically</p></div><span class="nt">10:08 PM</span></div>
+          <div class="tnote" data-tn><div class="ni"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Follow-up sent</b><p>Tuesday's open enquiry nudged</p></div><span class="nt">10:30 PM</span></div>
+        </div>
+      </div>
+      <div class="tile t-follow reveal d2">
+        <b class="h">Follow-up that doesn't forget</b>
+        <span class="s">Sample cadence for this concept</span>
+        <div class="mini-tl">
+          <div class="mtl"><b>The moment they reach out</b><p>Instant reply, details captured once</p></div>
+          <div class="mtl"><b>Next business morning</b><p>On the team's desk with full context</p></div>
+          <div class="mtl"><b>Until it's done</b><p>Open items chased on a schedule</p></div>
+          <div class="mtl"><b>Every quarter</b><p>It all lands in the reporting</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section quotes">
+  <div class="wrap">
+    <div class="bento-head reveal">
+      <span class="eyebrow">What it changes</span>
+      <h2>Four things the site can't do today.</h2>
+    </div>
+    <div class="benefits">
+      <div class="ben reveal"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><div><b>Out-of-hours enquiries stop evaporating</b><p>Every visitor gets an answer at the moment of interest instead of a form and a wait, whatever the hour or timezone.</p></div></div>
+      <div class="ben reveal d1"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div><div><b>Demos arrive pre-qualified</b><p>Portfolio size and requirements are captured in the conversation, so the first call starts with context rather than discovery.</p></div></div>
+      <div class="ben reveal d2"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l2.5 5.6 6.1.6-4.6 4.1 1.3 6-5.3-3.2-5.3 3.2 1.3-6L3.4 9.2l6.1-.6L12 3z"/></svg></div><div><b>First-time-fix rates get a head start</b><p>Model, fault and photo are captured before dispatch, which is exactly the information an engineer needs to arrive with the right part.</p></div></div>
+      <div class="ben reveal d3"><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3M20 16V6"/></svg></div><div><b>Every interaction feeds the data engine</b><p>Conversations, bookings and resolutions land in the same record that already powers Iterum IQ reporting.</p></div></div>
+    </div>
+    <div class="qsrc reveal">Capability description for this concept. No performance figures are claimed on this page; the figures shown on the site are Iterum's own published numbers.</div>
+  </div>
+</section>
+
+<section class="ctaband">
+  <div class="wrap">
+    <h2 class="reveal">Now see it living on <em>the site.</em></h2>
+    <p class="reveal d1">Same brand, same content, with the assistant answering in the corner.</p>
+    <div class="reveal d2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-white" href="index.html">Open the concept site</a>
+      <button class="btn btn-ghost" onclick="openChat()">Try the assistant here</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><img src="assets/logo-white.png" alt="Iterum"></div>
+        <p>End-to-end appliance lifecycle solutions for scaled rental portfolios. London, UK.</p>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="solutions.html">Consulting</a>
+        <a href="solutions.html">Procurement</a>
+        <a href="solutions.html">Appliance Management</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog &amp; Insights</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:info@iterum.uk">info@iterum.uk</a>
+        <a href="#" onclick="openChat();return false">Message us now</a>
+      </div>
+    </div>
+    <div class="disclosure">
+      This walkthrough page accompanies the Iterum concept preview and is not the company's live website. The chat assistant shown is a scripted demonstration, not a live system. Copy, quotes, impact figures, team, partner and platform information are sourced from iterum.uk as of August 5, 2026. Imagery, logo and partner marks sourced from iterum.uk.
+    </div>
+  </div>
+</footer>
+
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Open chat">
+  <span class="pulse"></span>
+  <svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.6 1.3 4.9 3.4 6.5-.1 1-.6 2.4-1.8 3.5 0 0 2.7-.2 4.8-1.7 1.1.3 2.4.5 3.6.5 5.5 0 10-3.9 10-8.8S17.5 3 12 3z"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="cav"><img src="assets/logo-mark.svg" alt=""></div>
+    <div><b>Iterum Assistant</b><span><i class="don"></i>Online now, replies in seconds</span></div>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-foot"><span>Scripted demo preview. The live version is trained on Iterum's solutions, portfolio data and booking calendar.</span></div>
+</div>
+
+<script src="assets/site.js?v=8"></script>
+</body>
+</html>

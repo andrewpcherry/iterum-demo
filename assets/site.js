@@ -54,3 +54,31 @@ setTimeout(()=>{if(!chatOpened&&!autoOpened&&window.innerWidth>760){autoOpened=t
 
 function toggleMenu(){const m=document.getElementById('mobileMenu'); if(m) m.classList.toggle('open')}
 document.addEventListener('click',e=>{const m=document.getElementById('mobileMenu'); if(m&&m.classList.contains('open')&&!m.contains(e.target)&&!e.target.closest('.nav-burger')) m.classList.remove('open')});
+
+/* ---- scene animations (only run where the elements exist) ---- */
+(function(){
+  const steps=[...document.querySelectorAll('[data-step]')];
+  if(steps.length){
+    let sI=0;
+    const cycle=()=>{steps.forEach((s,i)=>s.classList.toggle('on', i<=sI)); sI++;
+      if(sI>steps.length){sI=0;setTimeout(()=>steps.forEach(s=>s.classList.remove('on')),600)}};
+    cycle(); setInterval(cycle,1900);
+  }
+  const play=(sel,childSel,gap,delay)=>{
+    const el=document.querySelector(sel); if(!el) return;
+    const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){
+      (childSel?e.target.querySelectorAll(childSel):[]).forEach((b,i)=>setTimeout(()=>b.classList.add('show'), delay+i*gap));
+      o.unobserve(e.target)}}),{threshold:.3});
+    o.observe(el);
+  };
+  play('#tileChat','.tbub',1000,400);
+  play('#smsThread','.bub',1050,400);
+  const tn=document.querySelector('.t-notif');
+  if(tn){const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){
+    document.querySelectorAll('[data-tn]').forEach((n,i)=>setTimeout(()=>n.classList.add('show'),300+i*650)); o.unobserve(e.target)}}),{threshold:.3});
+    o.observe(tn)}
+  const feed=document.querySelector('.appfeed');
+  if(feed){const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){
+    document.querySelectorAll('[data-n]').forEach((n,i)=>setTimeout(()=>n.classList.add('show'),300+i*700)); o.unobserve(e.target)}}),{threshold:.3});
+    o.observe(feed)}
+})();

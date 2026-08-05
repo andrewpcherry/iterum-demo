@@ -341,3 +341,10 @@ footer a:hover{color:#fff}
 .choices button:hover{background:var(--green);color:#fff}
 .chat-foot{padding:11px 16px;background:#fff;border-top:1px solid var(--line);text-align:center}
 .chat-foot span{font-size:10.5px;color:var(--soft)}
+
+/* client hero side cards */
+.hero-side{display:flex;flex-direction:column;gap:14px}
+.hcard{background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:22px 26px;color:#fff}
+.hcard b{font-family:'Fraunces',serif;font-size:21px;font-weight:500;display:block;margin-bottom:5px}
+.hcard p{font-size:14px;color:#cfe2da}
+@media(max-width:960px){.hero-side{display:none}}
